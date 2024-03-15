@@ -15,9 +15,6 @@ use App\Http\Controllers\Home\WelcomeController as WelcomeController;
 |
 */
 
-Route::get('/', function () {
+use App\Http\Controllers\TrainController;
 
-    return view('pages.welcome');
-})->name('homePage');
-
-
+Route::get('/', [TrainController::class, 'index']);
